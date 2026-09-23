@@ -1,0 +1,15 @@
+Issues with given code:
+1. Tight coupling with ODBC:
+- Violation of "Open for extension; closed for modification". Inability to change to different provider in the future without code change
+- This is not possible to unit test since DB APIs are directly used
+
+Violation of "Open for extension; closed for modification". Inability to change to different provider in the future without code change
+This is not possible to unit test since DB APIs are directy used
+
+2. Multiple aspects in one method: 
+- extraction of trade details
+- DB connection
+- transaction
+
+Violation of single responsibility principle. Tight coupling leading to maintenance issues
+
